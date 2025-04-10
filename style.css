@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Scene container styling remains unchanged */
+#scene-container {
+  flex: 3 0 0px;
+  position: relative;
+}
+
+/* Configuration panel styling */
+#controls-container {
+  flex: 1 0 0px;
+  background-color: #222;
+  padding: 10px;
+  overflow: auto;
+  color: white;
+  min-height: 120px;
+  resize: vertical;
+  border-top: 3px solid #444;
+}
+
+/* Header for Configuration panel */
+#controls-container h2 {
+  margin: 0;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 1.5em;
+  border-bottom: 1px solid #444;
+}
+
+/* Container for all the manual controls */
+#gui-container {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Individual control styling */
+.config-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 1 1 200px;
+}
+
+.config-control label {
+  flex: 0 0 140px;
+}
+
+.config-control input[type="range"] {
+  flex: 1;
+}
+
+.config-control input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+.config-control span {
+  width: 40px;
+  text-align: center;
+}
+
+button#reset-btn {
+  padding: 6px 12px;
+  background-color: #555;
+  border: none;
+  color: #eee;
+  cursor: pointer;
+  border-radius: 4px;
+  flex: 1 1 100%;
+  margin-top: 10px;
+}
+
+button#reset-btn:hover {
+  background-color: #666;
+}
+
+/* Adjust for checkbox control layout */
+.checkbox-control {
+  flex: 1 1 100%;
+  justify-content: flex-start;
+}
